@@ -35,8 +35,8 @@ private:
   uint16_t _total_num_limit = 20;     //ヒステリシス
   uint16_t _lock_delay = 200;         //free⇒autoの復帰遅延 ms
 
-  uint16_t _Target = 1024 / 2;     //スライダー中心値
   uint16_t _input = 0;
+  long _Target = 1024 / 2;     //スライダー中心値
   double _integral = 0;
   double _last_err = 0;
   uint32_t _total_num = 0;
