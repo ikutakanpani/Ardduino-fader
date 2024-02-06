@@ -47,7 +47,6 @@ void PIDControl::set_target(uint16_t Target) {
     _Target = Target;
     _total_num = 0;
     _old_free_time = 0;
-    PIDControl::reset_total();
   }
 }
 
