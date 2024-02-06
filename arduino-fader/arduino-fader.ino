@@ -8,13 +8,13 @@ pwmに使用できるピンは9,10(timer1)だけ
 #include "PIDControl.h"
 #include "moving_Average.hpp"
 
-uint8_t analog_pin = A0;
+uint8_t analog_pin = A0;//モーターフェーダーのアナログ
 uint8_t motor_pin[2] = { 9, 10 };
 
-uint8_t vr_pin = A1;
+uint8_t vr_pin = A1;//普通のボリューム
 
-PIDControl PID;
-Average Average_vr(30);
+PIDControl PID;//PID制御
+Average Average_vr(30);//移動平均(30回平均)
 
 
 void setup() {
