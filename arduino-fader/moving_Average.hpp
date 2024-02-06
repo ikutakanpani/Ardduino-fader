@@ -14,6 +14,7 @@ public:
 
   Average(uint8_t Average_total, boolean hold) {
     _hold = hold;
+    _hold = _hold_set;
     _average_total = Average_total;
     if (_average_total > 50) _average_total = 50;
   }
@@ -21,6 +22,7 @@ public:
   void reset_total(){
     _average_sum = 0;
     _average_cnt = 0;
+    _hold = _hold_set;
   }
 
   void set_total(uint8_t Average_total) {
@@ -29,10 +31,12 @@ public:
     _average_total = Average_total;
     _average_sum = 0;
     _average_cnt = 0;
+    _hold = _hold_set;
   }
 
   void set_hold(boolean hold) {
-    _hold = hold;
+    _hold_set = hold;
+    _hold = _hold_set;
   }
 
   double input(double i) {
@@ -52,7 +56,8 @@ public:
 
 private:
   double _average_buf[50];
-  boolean _hold = true;
+  boolean _hold_set = true;
+  boolean _hold = _hold_set;
   uint8_t _average_cnt = 0;
   uint8_t _average_total = 0;
   double _average_val = 0;
