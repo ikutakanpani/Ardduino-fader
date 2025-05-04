@@ -74,8 +74,7 @@
 ※ピン配置についてはフラットケーブルを逆さまに接続しても故障しないように設定しました
 
 ## 基板実装イメージ
-![Image1](%E5%9F%BA%E6%9D%BF/img1.JPG?raw=true "Image1")
-![Image2](%E5%9F%BA%E6%9D%BF/img2.JPG?raw=true "Image2")
+※準備中
 
 # モーターフェーダーユニットの開発
 ## Arduino 環境の構築
